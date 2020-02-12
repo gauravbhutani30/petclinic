@@ -7,6 +7,7 @@ provider "aws" {
 resource "aws_instance" "my-ec2" {
   ami = "ami-2757f631"
   instance_type = "t2.micro"
+  key_name = "myec2key"
 
 user_data= <<EOF
 #!/bin/bash -xe
