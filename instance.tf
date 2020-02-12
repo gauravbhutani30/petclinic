@@ -22,6 +22,12 @@ sudo yum install -y java-1.8.0-openjdk-devel
 export JAVA_HOME=/usr/lib/java/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn.0.1.x86_64/
 export PATH=$PATH:/usr/lib/java/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn.0.1.x86_64/bin/
 
+#Install Manen
+sudo yum install -y maven
+
+#Install Git
+sudo yum install -y git
+
 #create a new directory for installing the softwares
 mkdir -p /home/ec2-user/installations
 cd /home/ec2-user/installations
