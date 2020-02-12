@@ -39,7 +39,6 @@ sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 sudo yum install -y jenkins
 sudo service jenkins start
 
-
 #Set required properties for Elasticsearch
 echo 262144 > /proc/sys/vm/max_map_count
 
@@ -68,8 +67,7 @@ echo "" > /home/ec2-user/installations/logstash-7.5.2/config/logstash-sample.con
 wget ftp://test.myserver.net/logstash-sample.conf
 cp logstash-sample.conf /home/ec2-user/installations/logstash-7.5.2/config/
 
-nohup /home/ec2-user/installations/logstash-7.5.2/bin/logstash -f /home/ec2-user/installations/logstash-7.5.2/config/logstash-sample.conf
-
+nohup /home/ec2-user/installations/logstash-7.5.2/bin/logstash -f /home/ec2-user/installations/logstash-7.5.2/config/logstash-sample.conf &
 
 #Download, configure and run Kibana
 curl -O https://artifacts.elastic.co/downloads/kibana/kibana-7.5.2-linux-x86_64.tar.gz
